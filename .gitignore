@@ -50,3 +50,13 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#idea files and files MacOS
+.idea
+.DS_Store
+.vscode
+
+# Qt Creator debug
+src/build/
+
+*.user
