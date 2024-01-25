@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>TreeDViewer</class>
- <widget class="QMainWindow" name="TreeDViewer">
-  <property name="windowModality">
-   <enum>Qt::ApplicationModal</enum>
-  </property>
+ <class>ThreeDViewer</class>
+ <widget class="QMainWindow" name="ThreeDViewer">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -14,13 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>TreeDViewer</string>
-  </property>
-  <property name="accessibleDescription">
-   <string notr="true"/>
-  </property>
-  <property name="locale">
-   <locale language="English" country="UnitedStates"/>
+   <string>ThreeDViewer</string>
   </property>
   <widget class="QWidget" name="centralwidget"/>
   <widget class="QMenuBar" name="menubar">

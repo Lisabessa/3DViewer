@@ -10,16 +10,16 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    treedviewer.cpp
+    threedviewer.cpp
 
 HEADERS += \
-    treedviewer.h
+    threedviewer.h
 
 FORMS += \
-    treedviewer.ui
+    threedviewer.ui
 
 TRANSLATIONS += \
-    3DViewer_en_US.ts
+    ThreeDViewer_en_US.ts
 CONFIG += lrelease
 CONFIG += embed_translations
 
