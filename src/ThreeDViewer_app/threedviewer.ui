@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ThreeDViewer</class>
+ <widget class="QMainWindow" name="ThreeDViewer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1047</width>
+    <height>792</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ThreeDViewer</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+	background: #ffe5ec;
+}</string>
+   </property>
+   <widget class="QToolBox" name="configuration">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>491</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolBox {
+	border-radius: 8px;
+	border-style: none;
+	color: black;
+ 	font-size: 14px;
+}
+
+QToolBox::tab {
+	border-radius: 4px;
+	background: #ffc2d1;
+	padding: 40px 20px;
+	color: black;
+}
+
+QToolBox::tab::selected {
+	background: #ff8fab;
+	color: black;
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>491</width>
+       <height>321</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Transform</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>491</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Scale</string>
+      </property>
+      <widget class="QWidget" name="">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>30</y>
+         <width>471</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <fontweight>ExtraBold</fontweight>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: rgb(247, 222, 229);</string>
+          </property>
+          <property name="text">
+           <string>-</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <fontweight>ExtraBold</fontweight>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: rgb(247, 222, 229);</string>
+          </property>
+          <property name="text">
+           <string>+</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSlider" name="horizontalSlider">
+          <property name="styleSheet">
+           <string notr="true">QSlider{
+	background: rgb(247, 222, 229);
+}
+QSlider::groove:horizontal {
+    border: 1px solid #ffc2d1;
+    height: 8px; 
+    background: white;
+    border-radius: 4px;
+    margin: 2px 0;
+}
+QSlider::handle:horizontal {
+    background: #fb6f92;
+    border: 1px solid #fb6f92;
+    width: 18px;
+    margin: -6px 2px;
+    border-radius: 10px;
+}
+QSlider::sub-page:horizontal {
+     background: #ffc2d1;
+     border-radius: 4px;
+     border: 1px solid #fb6f92;
+}</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>491</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Translate</string>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>471</width>
+         <height>95</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <fontweight>ExtraBold</fontweight>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: rgb(247, 222, 229);</string>
+          </property>
+          <property name="text">
+           <string>x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSlider" name="horizontalSlider_2">
+          <property name="styleSheet">
+           <string notr="true">QSlider{
+	background: rgb(247, 222, 229);
+}
+QSlider::groove:horizontal {
+    border: 1px solid #ffc2d1;
+    height: 8px; 
+    background: white;
+    border-radius: 4px;
+    margin: 2px 0;
+}
+QSlider::handle:horizontal {
+    background: #fb6f92;
+    border: 1px solid #fb6f92;
+    width: 18px;
+    margin: -6px 2px;
+    border-radius: 10px;
+}
+QSlider::sub-page:horizontal {
+     background: #ffc2d1;
+     border-radius: 4px;
+     border: 1px solid #fb6f92;
+}</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QDoubleSpinBox" name="doubleSpinBox">
+          <property name="styleSheet">
+           <string notr="true">QDoubleSpinBox {
+	background: rgb(247, 222, 229);
+}
+
+
+</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="font">
+           <font>
+            <fontweight>ExtraBold</fontweight>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: rgb(247, 222, 229);</string>
+          </property>
+          <property name="text">
+           <string>y</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSlider" name="horizontalSlider_3">
+          <property name="styleSheet">
+           <string notr="true">QSlider{
+	background: rgb(247, 222, 229);
+}
+QSlider::groove:horizontal {
+    border: 1px solid #ffc2d1;
+    height: 8px; 
+    background: white;
+    border-radius: 4px;
+    margin: 2px 0;
+}
+QSlider::handle:horizontal {
+    background: #fb6f92;
+    border: 1px solid #fb6f92;
+    width: 18px;
+    margin: -6px 2px;
+    border-radius: 10px;
+}
+QSlider::sub-page:horizontal {
+     background: #ffc2d1;
+     border-radius: 4px;
+     border: 1px solid #fb6f92;
+}</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="font">
+           <font>
+            <fontweight>ExtraBold</fontweight>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: rgb(247, 222, 229);</string>
+          </property>
+          <property name="text">
+           <string>z</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QSlider" name="horizontalSlider_4">
+          <property name="styleSheet">
+           <string notr="true">QSlider{
+	background: rgb(247, 222, 229);
+}
+QSlider::groove:horizontal {
+    border: 1px solid #ffc2d1;
+    height: 8px; 
+    background: white;
+    border-radius: 4px;
+    margin: 2px 0;
+}
+QSlider::handle:horizontal {
+    background: #fb6f92;
+    border: 1px solid #fb6f92;
+    width: 18px;
+    margin: -6px 2px;
+    border-radius: 10px;
+}
+QSlider::sub-page:horizontal {
+     background: #ffc2d1;
+     border-radius: 4px;
+     border: 1px solid #fb6f92;
+}</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_3">
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>190</y>
+        <width>491</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Rotate</string>
+      </property>
+      <widget class="QWidget" name="layoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>471</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="font">
+           <font>
+            <fontweight>ExtraBold</fontweight>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: rgb(247, 222, 229);</string>
+          </property>
+          <property name="text">
+           <string>x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSlider" name="horizontalSlider_5">
+          <property name="styleSheet">
+           <string notr="true">QSlider{
+	background: rgb(247, 222, 229);
+}
+QSlider::groove:horizontal {
+    border: 1px solid #ffc2d1;
+    height: 8px; 
+    background: white;
+    border-radius: 4px;
+    margin: 2px 0;
+}
+QSlider::handle:horizontal {
+    background: #fb6f92;
+    border: 1px solid #fb6f92;
+    width: 18px;
+    margin: -6px 2px;
+    border-radius: 10px;
+}
+QSlider::sub-page:horizontal {
+     background: #ffc2d1;
+     border-radius: 4px;
+     border: 1px solid #fb6f92;
+}</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_4"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_7">
+          <property name="font">
+           <font>
+            <fontweight>ExtraBold</fontweight>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: rgb(247, 222, 229);</string>
+          </property>
+          <property name="text">
+           <string>y</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSlider" name="horizontalSlider_6">
+          <property name="styleSheet">
+           <string notr="true">QSlider{
+	background: rgb(247, 222, 229);
+}
+QSlider::groove:horizontal {
+    border: 1px solid #ffc2d1;
+    height: 8px; 
+    background: white;
+    border-radius: 4px;
+    margin: 2px 0;
+}
+QSlider::handle:horizontal {
+    background: #fb6f92;
+    border: 1px solid #fb6f92;
+    width: 18px;
+    margin: -6px 2px;
+    border-radius: 10px;
+}
+QSlider::sub-page:horizontal {
+     background: #ffc2d1;
+     border-radius: 4px;
+     border: 1px solid #fb6f92;
+}</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_5"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_8">
+          <property name="font">
+           <font>
+            <fontweight>ExtraBold</fontweight>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: rgb(247, 222, 229);</string>
+          </property>
+          <property name="text">
+           <string>z</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QSlider" name="horizontalSlider_7">
+          <property name="styleSheet">
+           <string notr="true">QSlider{
+	background: rgb(247, 222, 229);
+}
+QSlider::groove:horizontal {
+    border: 1px solid #ffc2d1;
+    height: 8px; 
+    background: white;
+    border-radius: 4px;
+    margin: 2px 0;
+}
+QSlider::handle:horizontal {
+    background: #fb6f92;
+    border: 1px solid #fb6f92;
+    width: 18px;
+    margin: -6px 2px;
+    border-radius: 10px;
+}
+QSlider::sub-page:horizontal {
+     background: #ffc2d1;
+     border-radius: 4px;
+     border: 1px solid #fb6f92;
+}</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_6">
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>229</green>
+                <blue>236</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>491</width>
+       <height>321</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Style</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="page_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>491</width>
+       <height>321</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Open</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>491</width>
+       <height>321</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Export</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>0</y>
+      <width>20</width>
+      <height>721</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1047</width>
+     <height>43</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
